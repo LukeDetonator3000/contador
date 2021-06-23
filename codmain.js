@@ -9,8 +9,19 @@ function contador(){
         alert('Passo igual a "0" inválido, alterando para passo igual a 1!')
         pas = 1
     }
-    while(fim>=arm){
-        msg.innerHTML += ` ${arm}-->`
-        arm += pas
+    if (ini<fim) {
+        while(fim>=arm){
+            msg.innerHTML += ` ${arm}\u{1F449}`
+            arm += pas
+        }
     }
+    else if (ini>=fim) {
+        arm= ini
+        while(arm>=fim){
+            msg.innerHTML += ` ${arm}\u{1F449}`
+            arm -= pas
+        }
+    }
+    msg.innerHTML += ` ${arm}\u{1F44D}`
+   
 }
